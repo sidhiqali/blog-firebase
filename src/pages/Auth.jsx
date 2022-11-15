@@ -30,18 +30,29 @@ const Auth = ({ setActive, setUser }) => {
 
   const handleAuth = async (e) => {
     e.preventDefault();
-    if (!signUp) {
-      if (email && password) {
-        const { user } = await signInWithEmailAndPassword(
-          auth,
-          email,
-          password
-        );
-        setUser(user);
-        setActive("home");
-      } else {
-        return toast.error("All fields are mandatory to fill");
+    if (!signUp){
+        
+          
+            if (email && password) {
+              try {
+              const { user } = await signInWithEmailAndPassword(
+                auth,
+                email,
+                password
+              )
+          setUser(user)
+          setActive("home");
+        }catch (error) {
+          
+          return toast.error("Incorrect password")
+        
       }
+      }  else {
+          return toast.error("All fields are mandatory to fill");
+        }
+        
+       
+  
     } else {
       if (password !== confirmPassword) {
         return toast.error("Password don't match");
