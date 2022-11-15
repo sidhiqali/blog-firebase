@@ -65,7 +65,7 @@ const Header = ({ active, setActive, user, handleLogout }) => {
                     <>
                       <div className="profile-logo">
                         <img
-                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                          src="https://www.pngmart.com/files/22/User-Avatar-Profile-Background-Isolated-PNG.png"
                           alt="logo"
                           style={{
                             width: "30px",

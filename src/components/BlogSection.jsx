@@ -5,6 +5,7 @@ import { excerpt } from "../utility/excerpt";
 
 const BlogSection = ({ blogs, user, handleDelete }) => {
   const userId = user?.uid;
+
   return (
     <div>
       <div className="blog-heading text-start py-2 mb-4">Daily Blogs</div>
